@@ -30,5 +30,7 @@ class AnalyticsProxy private constructor(private val analyticsTacker: AnalyticsT
 
 }
 
-inline fun <reified T : Any> AnalyticsProxy.create(): T = create(T::class.java)
+inline fun <reified T : Any> AnalyticsProxy.create(): T {
+    return create(T::class.java)
+}
 

@@ -2,6 +2,7 @@ package com.apro.javadynamicproxy
 
 import com.apro.analyticsproxy.AnalyticsProxy
 import com.apro.analyticsproxy.AnalyticsTacker
+import com.apro.analyticsproxy.create
 
 fun main() {
 
@@ -9,8 +10,8 @@ fun main() {
         .analyticsTracker(LogAnalyticsTacker())
         .build()
 
-    val appAnalytics: AppAnalytics = analyticsProxy.create(AppAnalytics::class.java)
 
+    val appAnalytics: AppAnalytics = analyticsProxy.create()
 
     appAnalytics.trackAppStart()
     appAnalytics.trackClickCount(44)
