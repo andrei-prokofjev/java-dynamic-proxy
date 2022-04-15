@@ -5,9 +5,9 @@ import com.apro.analyticsproxy.Param
 
 interface AppAnalytics {
 
-    @EventName("App Start")
+    @EventName(value = "App Start")
     fun trackAppStart()
 
-    @EventName("Click count")
+    @EventName(value = "Click count")
     fun trackClickCount(@Param("count") count: Int)
 }

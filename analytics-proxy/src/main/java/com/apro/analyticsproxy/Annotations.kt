@@ -3,7 +3,7 @@ package com.apro.analyticsproxy
 
 @Target(AnnotationTarget.FUNCTION)
 @Retention(AnnotationRetention.RUNTIME)
-annotation class EventName(val name: String)
+annotation class EventName(val value: String)
 
 @Target(AnnotationTarget.VALUE_PARAMETER)
 @Retention(AnnotationRetention.RUNTIME)
